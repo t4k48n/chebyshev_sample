@@ -13,6 +13,8 @@
 
 ## 開発環境
 
+### Anaconda (minoconda)の場合
+
 このコードを動かしている環境は`conda_env.txt`に保存している．次のコマンドで環境を復元することができる．
 
 ```
@@ -28,6 +30,10 @@ cond create -n <env_name> --file conda_env.txt
 - ipython
 
 このうちipythonは対話環境を便利にするために入れた．最小環境には必要ない．numpy, scipyはバックエンドにmklを使っているが，openblas版でも問題はない．
+
+### Poetryの場合
+
+単に`poetry install`を実行すればよい．
 
 ## TODO
 

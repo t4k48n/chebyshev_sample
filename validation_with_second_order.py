@@ -22,8 +22,7 @@ def f1_orig(x1, x2):
     return PARAMETER_A[0,:] @ np.array([x1, x2])
 
 def f2_orig(x1, x2):
-    #return PARAMETER_A[1,:] @ np.array([x1, x2])
-    return -9.8 * np.sin(x1) - 1.0 * x2
+    return PARAMETER_A[1,:] @ np.array([x1, x2])
 
 def g1_orig(x1, x2):
     return PARAMETER_B[0,0]
@@ -49,7 +48,7 @@ def plot_log(log, indices):
         plt.plot(line, label=str(i))
 
 if __name__ == "__main__":
-    N = 9
+    N = 5
     indices = ch2d.generate_indices(N)
     LEN_INDICES = len(indices)
 
@@ -75,7 +74,7 @@ if __name__ == "__main__":
     v_log = []
 
     u = u_0
-    L = 1
+    L = 10
     for i in range(L):
         # GHJB=0を計算．
         u_sq = scale(PARAMETER_R[0,0], ch2d.extract(mul(u, u), indices))
